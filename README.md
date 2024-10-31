@@ -7,7 +7,8 @@
 3. [Technologies](#technologies)
 4. [Installation Instructions](#installation-instructions)
 5. [Start Project](#start-project)
-6. [Contact Information](#contact-information)
+6. [Testing](#testing)
+7. [Contact Information](#contact-information)
 
 
 ## Description
@@ -73,6 +74,36 @@ Endpoints: Exposes a REST API for predictions, receiving device specs and return
 2. Start the SpringBoot app :
     ```bash
         ./mvnw spring-boot:run
+
+## Testing 
+
+1. Open Postman and create a new POST request.
+2. Set the URL to call the prediction endpoint in your Spring Boot application:
+    ```plaintext
+    http://localhost:8080/api/predict/{deviceId}
+    ```
+    Replace {deviceId} with the specific ID of the device you want to predict.
+3. Send the Request:
+    - Ensure the device with {deviceId} exists in the database (use the POST /api/devices endpoint to add a new device if needed).
+    - Click Send to send the request.
+4. Receive the Predicted Price:
+    - The Spring Boot application will forward the request to the Python prediction API.
+    - The response will contain the predicted price range  for the specified device.
+5. Verify Prediction:
+
+    - In the Response section of Postman, you should see the predicted price range returned by the Python model, stored and accessible within the Spring Boot application.
+
+
+
+By using Postman, you can quickly test the integration and verify that the Spring Boot application is correctly interacting with the Python prediction API.
+
+
+
+
+
+
+
+
 ## Contact Information
 
 Zeyad Hassan 
