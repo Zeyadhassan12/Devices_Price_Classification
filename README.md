@@ -7,6 +7,7 @@
 3. [Technologies](#technologies)
 4. [Installation Instructions](#installation-instructions)
 5. [Start Project](#start-project)
+6. [Postman](#postman)
 6. [Testing](#testing)
 7. [Contact Information](#contact-information)
 
@@ -74,6 +75,17 @@ Endpoints: Exposes a REST API for predictions, receiving device specs and return
 2. Start the SpringBoot app :
     ```bash
         ./mvnw spring-boot:run
+## Postman
+
+My Postman is provided to test the API endpoints. You can find it in the postman directory.
+
+To use my collection:
+
+1. Download the collection file.
+2. Open Postman and click on "Import".
+3. Choose the downloaded JSON file.
+
+Once imported, you’ll see a set of test cases ready to run. You can use these requests to easily test the API.
 
 ## Testing 
 
