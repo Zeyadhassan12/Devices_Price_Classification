@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  python-api:
+    build:
+      context: /Users/zeyadhassan/Desktop/Devices_Price_Classification/Flask_app  # Path to the Python Dockerfile
+      dockerfile: dockerfile
+    ports:
+      - "5001:5000"
+
+  springboot-api:
+    build:
+      context: /Users/zeyadhassan/Desktop/Devices_Price_Classification/test  # Path to the Spring Boot Dockerfile
+      dockerfile: dockerfile
+    ports:
+      - "8080:8080"
